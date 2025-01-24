@@ -13,19 +13,19 @@ This guide explains how to set up and run the INI Miner on a Linux machine.
 ### 1. Clone the Repository or Download the Scripts
 Download the necessary Bash scripts or clone this repository (if applicable).
 ```bash
-git clone https://github.com/envyst/cloudshell-iniminer.git
-cd cloudshell-iniminer
-chmod +x download_and_prepare.sh run_miner.sh
+git clone https://github.com/envyst/iniminer-mainnet.git
+cd iniminer-mainnet
+chmod +x download.sh run.sh
 ```
 
 ---
 
 ### 2. Prepare the Environment
 
-Run the `download_and_prepare.sh` script to download the miner and set the correct permissions.
+Run the `download.sh` script to download the miner and set the correct permissions.
 
 ```bash
-./download_and_prepare.sh
+./download.sh
 ```
 
 ---
@@ -34,23 +34,20 @@ Run the `download_and_prepare.sh` script to download the miner and set the corre
 
 Edit run_miner.sh, on part **address** and **Worker001**.
 ```bash
-vim run_miner.sh
+nano run.sh
 ```
-- press 'i'
 - edit address/worker
-- press esc
-```bash
-:wq
-```
+- Ctrl + X
+- Y
 - enter
 
-Run the `run_miner.sh` script to start mining.
+Run the `run.sh` script to start mining.
 ```bash
 screen -S iniminer
 ```
 
 ```bash
-./run_miner.sh
+./run.sh
 ```
 then Ctrl + A D
 
@@ -60,6 +57,6 @@ then Ctrl + A D
 just run the miner
 ```bash
 screen -r iniminer
-./run_miner.sh
+./run.sh
 ```
 then Ctrl + A D
